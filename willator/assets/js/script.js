@@ -99,39 +99,31 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
-
-
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
-        center: new google.maps.LatLng(24.909439, 91.833800),
-        zoom: 16,
-        scrollwheel: false,
+        center: { lat: 43.7228386, lng: 10.401688799999988 },
+        zoom: 15,
+        scrollwheel: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
 
     var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(24.909439, 91.833800),
-            title:"Boots4 Office"
-        });
+        position: new google.maps.LatLng(43.71769434, 10.41178554),
+        title: "Rendez-vous"
+    });
 
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-
-    //google.maps.event.addDomListener(window, 'load', initialize);
-
+    // To add the marker to the map, call setMap();
+    marker.setMap(map);
+    //map.setCenter(marker.getPosition());
 
     // Show Reletive Page Onclick
 
     $('.menu div.profile-btn').on('click', function () {
         $('.profile-page').fadeIn(1200);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.count').each(function () {
-                $(this).prop('Counter',0).animate({
+                $(this).prop('Counter', 0).animate({
                     Counter: $(this).text()
                 }, {
                     duration: 7500,
@@ -146,7 +138,7 @@ $(document).ready(function () {
 
     $('.menu div.portfolio-btn').on('click', function () {
         $('.portfolio-page').fadeIn(1200);
-        setTimeout(function(){
+        setTimeout(function () {
             $('#projects').mixItUp();
         }, 100);
     });
@@ -157,9 +149,9 @@ $(document).ready(function () {
 
     $('.menu div.contact-btn').on('click', function () {
         $('.contact-page').fadeIn(1200);
-        setTimeout(function(){
-            google.maps.event.trigger(map,'resize');
-        },100);
+        setTimeout(function () {
+            google.maps.event.trigger(map, 'resize');
+        }, 100);
     });
 
 
@@ -189,17 +181,17 @@ $(document).ready(function () {
 
     /*----------------------script for owl carousel sponsors---------------------*/
 
-        $("#sponsor-list").owlCarousel({
-                 
-            autoPlay: 3000, //Set AutoPlay to 3 seconds
-            stopOnHover: true,
-            items : 3,
-            itemsDesktop: [1200,3],
-            itemsDesktopSmall: [991,3],
-            itemsTablet: [767,2],
-            itemsTabletSmall: [625,2],
-            itemsMobile: [479,1]
-        });
+    $("#sponsor-list").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        stopOnHover: true,
+        items: 3,
+        itemsDesktop: [1200, 3],
+        itemsDesktopSmall: [991, 3],
+        itemsTablet: [767, 2],
+        itemsTabletSmall: [625, 2],
+        itemsMobile: [479, 1]
+    });
 
 
 
@@ -215,6 +207,7 @@ $(document).ready(function () {
     });
 
 
-    
+
+
 
 });

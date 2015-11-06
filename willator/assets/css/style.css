@@ -567,7 +567,7 @@ body {
 .team-member-box {
     background-color: #f3f3f3;
     border: 1px solid #F3f3f3;
-    margin-bottom: 50px;
+    margin-bottom: 1px;
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
@@ -576,19 +576,19 @@ body {
 }
 
 .team-member-box h4 {
-    margin-bottom: 5px;
-    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-top: 1px;
     /*font-size: 18px;*/
     font-size: 1.5em;
 }
 
-.team-member-box p {
+/*.team-member-box p {
     color: #a3a2a2;
-}
+}*/
 
-.team-member-box:hover {
-    box-shadow: 3px 5px 9px #dfdfdf;
-}
+/*.team-member-box:hover {
+    box-shadow: 3px 5px 1px #dfdfdf;
+}*/
 
 .video {
     box-shadow: 2px 5px 9px #dfdfdf;
