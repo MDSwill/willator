@@ -158,6 +158,7 @@ $(document).ready(function () {
     // Close Button, Hide Menu
 
     $('.close-btn').on('click', function () {
+        //$("#rocketLauncher").
         $('.home-page').css({
             visibility: 'visible'
         });

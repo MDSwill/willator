@@ -4,17 +4,17 @@
 
 	// Check if name has been entered
 	if (!isset($_POST['name'])) {
-		$errors['name'] = 'Please enter your name';
+		$errors['name'] = 'Per favore inserisci il tuo nome';
 	}
 	
 	// Check if email has been entered and is valid
 	if (!isset($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$errors['email'] = 'Please enter a valid email address';
+		$errors['email'] = 'Per favore inserisci un indirizzo e-mail valido';
 	}
 	
 	//Check if message has been entered
 	if (!isset($_POST['massage'])) {
-		$errors['message'] = 'Please enter your message';
+		$errors['message'] = 'Per favore inserisci un messaggio';
 	}
 
 	$errorOutput = '';
@@ -43,8 +43,8 @@
 	$email = $_POST['email'];
 	$message = $_POST['massage'];
 	$from = $email;
-	$to = 'info@themewagon.com';  // please change this email id
-	$subject = 'Contact Form : Boots4 - First Bootstrap 4 Website Template Ever In The World';
+	$to = 'marco.delseppia@gmail.com';
+	$subject = 'Infos 'bout you';
 	
 	$body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
@@ -54,7 +54,7 @@
 	if (mail ($to, $subject, $body)) {
 		$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
  		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-		$result .= 'Thank You! I will be in touch';
+		$result .= 'Grazie, ti contatterò il prima possibile';
 		$result .= '</div>';
 
 		echo $result;
@@ -64,7 +64,7 @@
 	$result = '';
 	$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
 	$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-	$result .= 'Something bad happend during sending this message. Please try again later';
+	$result .= 'Qualcosa di strano è successo durante l'invio della mail, per favore ritenta';
 	$result .= '</div>';
 
 	echo $result;
